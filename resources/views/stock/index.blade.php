@@ -7,7 +7,7 @@
 @section('content')
     <h1>Stock Inventory</h1>
 
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th>Product Name</th>
@@ -24,11 +24,14 @@
                     <td>{{ $product->product_quantity }}</td>
                     <td>
                         <a href="{{ route('stock.edit', $product->id) }}">Edit</a>
+
+
                         <form action="{{ route('stock.destroy', $product->id) }}" method="post">
                             @csrf
                             @method('delete')
                             <button type="submit">Delete</button>
                         </form>
+
                         <a href="{{ route('stock.sellForm', $product->id) }}">Sell</a>
                     </td>
                 </tr>

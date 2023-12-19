@@ -5,9 +5,7 @@
 @section('content')
 <div class="row">
 
-        {{-- <div class="d-flex justify-content-end my-4">
-            <a href="{{ route('sell.create') }}" class="btn btn-info">Create Sell</a>
-        </div> --}}
+       
 
 
 <h1>Sells Transection History</h1>
